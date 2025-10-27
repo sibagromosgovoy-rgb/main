@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модульные решения - Производство металлоконструкций и модульных объектов</title>
+    <meta name="description" content="Модульные решения - профессиональное производство бытовок, жилых модулей, КПП, складов и других металлоконструкций. Качество и надёжность.">
+    <link rel="icon" href="public/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo-link">
+                    <img src="src/assets/logo.png" alt="Модульные решения" class="logo">
+                    <span class="logo-text">Модульные решения</span>
+                </a>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#about" class="nav-link">О компании</a>
+                    <a href="#projects" class="nav-link">Примеры работ</a>
+                    <a href="#contacts" class="nav-link">Контакты</a>
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <!-- Hero Slider -->
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slides"></div>
+            <div class="hero-nav">
+                <button class="hero-prev" aria-label="Предыдущий слайд">‹</button>
+                <button class="hero-next" aria-label="Следующий слайд">›</button>
+            </div>
+            <div class="hero-dots"></div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services-section">
+            <div class="container">
+                <h2 class="section-title">Наши направления деятельности</h2>
+                <div class="services-grid" id="servicesGrid"></div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <form class="contact-form" id="contactForm">
+                        <input type="hidden" name="source" value="Главная">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7(999) 999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section" style="display: none;">
+        <div class="container">
+            <button class="back-btn" onclick="showSection('home')">← Назад</button>
+            <h1 class="page-title" id="aboutTitle">О компании</h1>
+            <div class="about-content" id="aboutContent"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="page-section" style="display: none;">
+        <div class="container">
+            <button class="back-btn" onclick="showSection('home')">← Назад</button>
+            <h1 class="page-title">Наши проекты</h1>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+        
+        <!-- Contact Form on Projects Page -->
+        <div class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <form class="contact-form" id="projectsContactForm">
+                        <input type="hidden" name="source" value="Примеры работ">
+                        <div class="form-group">
+                            <label for="projects-name">Имя</label>
+                            <input type="text" id="projects-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projects-phone">Телефон</label>
+                            <input type="tel" id="projects-phone" name="phone" placeholder="+7(999) 999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projects-message">Сообщение</label>
+                            <textarea id="projects-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="page-section" style="display: none;">
+        <div class="container">
+            <button class="back-btn" onclick="showSection('home')">← Назад</button>
+            <h1 class="page-title">Контакты</h1>
+            <div class="contacts-content">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <h3>📞 Телефон</h3>
+                        <a href="tel:+7" id="contactsPhone">+7 (XXX) XXX-XX-XX</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>✉ Email</h3>
+                        <a href="mailto:s.mosgovoy@yandex.ru" id="contactsEmail">s.mosgovoy@yandex.ru</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 Адрес</h3>
+                        <p>Свяжитесь с нами для уточнения адреса офиса и производства</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕐 Режим работы</h3>
+                        <p>Пн-Пт: 9:00 - 18:00<br>Сб-Вс: Выходной</p>
+                    </div>
+                </div>
+                <div class="contacts-form">
+                    <h2>Свяжитесь с нами</h2>
+                    <form class="contact-form" id="contactsPageForm">
+                        <input type="hidden" name="source" value="Страница контактов">
+                        <div class="form-group">
+                            <label for="contacts-page-name">Имя</label>
+                            <input type="text" id="contacts-page-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contacts-page-phone">Телефон</label>
+                            <input type="tel" id="contacts-page-phone" name="phone" placeholder="+7(999) 999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contacts-page-message">Сообщение</label>
+                            <textarea id="contacts-page-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Section -->
+    <section id="service" class="page-section" style="display: none;">
+        <div class="container">
+            <button class="back-btn" onclick="showSection('home')">← Назад</button>
+            <h1 class="page-title" id="serviceTitle"></h1>
+            <div class="service-hero">
+                <img id="serviceHeroImage" src="" alt="">
+            </div>
+            <div class="service-description" id="serviceDescription"></div>
+            
+            <!-- Gallery -->
+            <div class="gallery-section">
+                <h2 class="section-title">Примеры работ</h2>
+                <div class="gallery-slider">
+                    <button class="gallery-prev" onclick="moveGallery(-1)">‹</button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery-track" id="galleryTrack"></div>
+                    </div>
+                    <button class="gallery-next" onclick="moveGallery(1)">›</button>
+                </div>
+            </div>
+
+            <!-- Contact Form on Service Page -->
+            <div class="contact-section">
+                <div class="contact-wrapper">
+                    <h2 class="section-title">Свяжитесь с нами</h2>
+                    <form class="contact-form" id="serviceContactForm">
+                        <input type="hidden" name="source" id="serviceFormSource" value="">
+                        <div class="form-group">
+                            <label for="service-name">Имя</label>
+                            <input type="text" id="service-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service-phone">Телефон</label>
+                            <input type="tel" id="service-phone" name="phone" placeholder="+7(999) 999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service-message">Сообщение</label>
+                            <textarea id="service-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Gallery -->
+    <div id="galleryModal" class="modal">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <button class="modal-prev" onclick="changeModalImage(-1)">‹</button>
+        <button class="modal-next" onclick="changeModalImage(1)">›</button>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+            <div class="modal-counter" id="modalCounter"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Контактная информация</h3>
+                    <div class="footer-contacts">
+                        <a href="#" class="footer-contact" id="footerPhone">
+                            <span class="icon">📞</span>
+                            <span></span>
+                        </a>
+                        <a href="#" class="footer-contact" id="footerEmail">
+                            <span class="icon">✉</span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <p>Производство металлоконструкций и модульных объектов любой сложности. Качество, надёжность, профессионализм.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footerCopyright"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS Library (раскомментируйте после регистрации на emailjs.com) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
